@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "search_term_view": {
+        "search_term": "abc"
+      },
+      "metrics": {
+        "impressions": 1,
+        "clicks": 1,
+        "ctr": 0.5,
+        "conversions": 0.5,
+        "conversionsFromInteractionsRate": 0.5,
+        "conversionsValue": 0.5,
+        "costMicros": 1
+      }
+    }
+  ],
+  "total_results_count": 99
+}
