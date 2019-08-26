@@ -21,7 +21,7 @@ type server struct{}
 func (s *server) Search(ctx context.Context, in *services.SearchGoogleAdsRequest) (*services.SearchGoogleAdsResponse, error) {
 	log.Printf("Received(Service): %v", in)
 
-	file, err := os.Open("./googleads-mock/search_term_view.json")
+	file, err := os.Open("./search_term_view.json")
 	if err != nil {
 		log.Fatalf("failed to read file: %v", err)
 	}

@@ -11,7 +11,7 @@
         "conversions": 0.5,
         "conversionsFromInteractionsRate": 0.5,
         "conversionsValue": 0.5,
-        "costMicros": 1
+        "costMicros": 1000000
       }
     }
   ],
