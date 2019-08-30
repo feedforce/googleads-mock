@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/golang/protobuf/jsonpb"
-	"google.golang.org/genproto/googleapis/ads/googleads/v1/services"
+	"google.golang.org/genproto/googleapis/ads/googleads/v2/services"
 	"google.golang.org/grpc"
 )
 
