@@ -5,5 +5,5 @@ RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build
 
 FROM scratch
 WORKDIR /app
-COPY --from=build /work/googleads-mock .
+COPY --from=build /work/googleads-mock /work/search_term_view.json ./
 ENTRYPOINT ["/app/googleads-mock"]
