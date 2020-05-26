@@ -48,7 +48,7 @@ func (s *server) SearchStream(in *services.SearchGoogleAdsStreamRequest, stream 
 	}
 
 	if err = stream.Send(&response); err != nil {
-		return err
+		log.Fatalf("%s", err)
 	}
 
 	return nil
