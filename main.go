@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/golang/protobuf/jsonpb"
-	"google.golang.org/genproto/googleapis/ads/googleads/v3/services"
+	"google.golang.org/genproto/googleapis/ads/googleads/v2/services"
 	"google.golang.org/grpc"
 )
 
@@ -35,27 +35,8 @@ func (s *server) Search(ctx context.Context, in *services.SearchGoogleAdsRequest
 	return &response, nil
 }
 
-func (s *server) SearchStream(in *services.SearchGoogleAdsStreamRequest, stream services.GoogleAdsService_SearchStreamServer) error {
-	file, err := os.Open("./search_term_view_stream.json")
-	if err != nil {
-		log.Fatalf("failed to read file: %v", err)
-	}
-
-	var response services.SearchGoogleAdsStreamResponse
-	err = jsonpb.Unmarshal(file, &response)
-	if err != nil {
-		log.Fatalf("%s", err)
-	}
-
-	if err = stream.Send(&response); err != nil {
-		log.Fatalf("%s", err)
-	}
-
-	return nil
-}
-
 func (s *server) Mutate(ctx context.Context, in *services.MutateGoogleAdsRequest) (*services.MutateGoogleAdsResponse, error) {
-	panic(fmt.Sprintf("Mutate of SearchGoogleAdsRequest hasn't been implemented yet."))
+	panic(fmt.Sprintf("Mutate of SearchGoogleAdsRequest has'nt been implemented yet."))
 }
 
 func main() {
